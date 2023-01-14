@@ -5,6 +5,6 @@ WORKDIR /home/app
 RUN mvn clean install
 
 FROM openjdk:11-jre-slim
-COPY --from=build /home/app/target/*.jar app.jar
+COPY --from=build /home/app/target/*.war app.war
 EXPOSE 9000
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "app.war"]
