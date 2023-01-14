@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'docker build -t starter_code'
+        sh 'docker build -t Java_Security_AWS:latest'
       }
     }
 
